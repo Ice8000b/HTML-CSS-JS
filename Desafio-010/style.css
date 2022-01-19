@@ -1,0 +1,202 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'android';
+    src: url('Midia/Fonts/idroid.otf');
+}
+
+ :root {
+    --nav-bg: #23232E;
+    --footer-bg: #232323;
+    --android-font: android;
+    --main-bg: #383635;
+    --links-bg: #5271FF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI';
+}
+
+body {
+    background-image: url(Midia/Images/bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav a:hover,
+.mobile-menu:hover {
+    opacity: 0.6;
+}
+
+main a {
+    background-color: var(--links-bg);
+    padding: 3px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav {
+    background-color: var(--nav-bg);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+}
+
+.logo {
+    font-size: 28px;
+    letter-spacing: 3px;
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-list li {
+    padding: 16px;
+    list-style: none;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background-color: var(--main-bg);
+}
+
+main img {
+    margin: auto;
+    display: block;
+    width: 100%;
+}
+
+main h1,
+h2 {
+    font-family: var(--android-font);
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin-left: 10px;
+}
+
+main p {
+    font-size: 22px;
+    text-align: justify;
+}
+
+footer {
+    background-color: var(--footer-bg);
+}
+
+footer>p {
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    font-weight: 600;
+}
+
+aside>h3 {
+    background-color: #123E51;
+    padding: 4px;
+    border-radius: 5px 5px 0 0;
+}
+
+aside ul {
+    columns: 2;
+    padding: 20px;
+}
+
+aside p {
+    padding: 20px;
+}
+
+aside {
+    background-color: #0a222c;
+    margin-bottom: 20px;
+    border-radius: 0 0 5px 5px;
+}
+
+.mobile-menu {
+    display: none;
+    transition: 0.3s;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    margin: 8px;
+    background-color: white;
+}
+
+div>video {
+    width: 560px;
+    width: auto;
+    margin: auto;
+    display: block;
+    padding: 20px;
+    background: #232323;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#bugdroid {
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .nav-list {
+        position: absolute;
+        top: 10vh;
+        right: 0;
+        width: 0;
+        height: 90vh;
+        flex-direction: column;
+        background-color: var(--nav-bg);
+        justify-content: space-around;
+        align-items: center;
+        overflow-x: hidden;
+    }
+    .mobile-menu {
+        display: block;
+    }
+    .nav-list li {
+        opacity: 0;
+    }
+    main h1,
+    h2 {
+        font-size: 28px;
+    }
+    #bugdroid {
+        width: 300px;
+        margin: auto;
+        display: block;
+    }
+    div>video {
+        width: 340px;
+    }
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
