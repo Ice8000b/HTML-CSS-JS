@@ -35,7 +35,7 @@ a {
     color: white;
     text-decoration: none;
     padding: 22px;
-    font-size: 17px;
+    font-size: 18px;
     transition: 0.4s;
 }
 
@@ -72,10 +72,24 @@ a:hover,
         justify-content: space-around;
         background-image: linear-gradient(to right, var(--nav-gradient-1), var(--nav-gradient-2));
         width: 0;
+        height: 90vh;
+        transition: 0.3s;
+    }
+    .nav-list li {
         opacity: 0;
-        height: 92vh;
     }
     .mobile-menu {
         display: block;
+    }
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
