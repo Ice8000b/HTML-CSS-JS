@@ -1,0 +1,110 @@
+@charset "UTF-8";
+:root {
+    --login-screen-bg: #201B2C;
+    --button-color: #00FF88;
+    --text-color: #77FFC0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--login-screen-bg);
+}
+
+.main-login {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.left-login>h1 {
+    color: var(--text-color);
+    font-size: 3vw;
+    font-family: url('Midia/Fonts/Roboto/Roboto-Bold.ttf');
+    margin-top: 20px;
+}
+
+.right-login {
+    background-color: #2F2841;
+    width: 30%;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.right-login>h1 {
+    color: #00FF88;
+    font-size: 32px;
+    text-transform: uppercase;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.right-login>div>input {
+    padding: 10px;
+    width: 90%;
+    margin: 10px 0px;
+    border-radius: 20px;
+    background-color: #514869;
+    border: none;
+    color: #F0FFFFDE;
+}
+
+.right-login>div>input:focus {
+    border: 1px solid gray;
+    outline: none;
+}
+
+.text-field {
+    color: #F0FFFFDE;
+    font-weight: 500;
+    font-family: 'Segoe UI';
+    align-items: flex-start;
+    width: 100%;
+}
+
+.text-field>input::placeholder {
+    color: #F0FFFF94;
+}
+
+.login {
+    width: auto;
+    width: 100%;
+    padding: 16px 0;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-family: 'Segoe UI';
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #2B134B;
+    background-color: #00FF88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00FF8052;
+}
+
+.left-login>img {
+    width: 35vw;
+}
+
+@media(max-width: 999px) {
+    .main-login {
+        flex-direction: column;
+    }
+    .right-login {
+        width: 60%;
+    }
+    .left-login>img {
+        width: 100%;
+    }
+    .left-login>h1 {
+        font-size: 5vw;
+    }
+}
