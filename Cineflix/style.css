@@ -1,0 +1,415 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'roboto';
+    src: url('Midia/Fonts/Roboto/Roboto-Light.ttf');
+}
+
+:root {
+    --bg: #131720;
+    --blue: #007BFF;
+    --blue2: #162032;
+    --red: #C70000;
+    --rich-black: #131720;
+    --light-blue: #3182ED;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI';
+    color: white;
+}
+
+body {
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+}
+
+#main-header {
+    max-width: 1440px;
+}
+
+nav {
+    margin: 0 102px 0 102px;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a:hover {
+    color: var(--blue);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-family: 'roboto';
+    transition: 0.3s ease-in;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li {
+    margin: 0 32px 0 0;
+}
+
+.search-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.search-list li {
+    margin-right: 40px;
+}
+
+.search-list input {
+    background-color: var(--blue2);
+    padding: 12px 20px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    color: rgb(211, 211, 211);
+    font-family: 'roboto';
+}
+
+.banner {
+    margin-bottom: 60px;
+}
+
+.banner-card {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.banner-img {
+    transition: 0.3s;
+    border-radius: 20px;
+    object-position: top;
+}
+
+.banner-card:hover .banner-img {
+    transform: scale(1.1);
+}
+
+.banner-card .card-content {
+    position: absolute;
+    right: 80px;
+    bottom: 60px;
+    left: 80px;
+}
+
+.banner-card .card-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.banner-card .card-info div {
+    color: white;
+    font-size: 17px;
+    margin-right: 20px;
+}
+
+.card-content .card-title {
+    font-size: 40px;
+    color: white;
+}
+
+.card-content {
+    font-weight: 600;
+    font-family: 'Segoe UI';
+}
+
+.quality {
+    background-color: var(--blue);
+    padding: 0 4px 0 4px;
+    border-radius: 4px;
+}
+
+.movies {
+    margin-bottom: 60px;
+}
+
+.filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--blue2);
+    padding: 20px 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.filter-bar select {
+    background-color: var(--blue2);
+    border: none;
+    color: white;
+    font-size: 18px;
+    margin-right: 15px;
+    cursor: pointer;
+    outline: none;
+}
+
+.filter-bar option {
+    background-color: var(--blue2);
+}
+
+.filter-radios {
+    position: relative;
+    background-color: var(--rich-black);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.filter-radios input {
+    display: none;
+}
+
+.filter-radios label {
+    position: relative;
+    margin: 0 10px;
+    font-size: 18px;
+    user-select: none;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.filter-radios input:checked+label,
+.filter-radios label:hover {
+    color: var(--light-blue);
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+img {
+    border-radius: 10px;
+}
+
+.movie-grid img {
+    cursor: pointer;
+    transition: 0.3s;
+    width: 160px;
+    height: 100%;
+}
+
+.card-title {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.card-info {
+    font-size: 14px;
+}
+
+.movie-card .card-head {
+    position: relative;
+    height: 250px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.movie-grid img:hover {
+    filter: blur(5px);
+    transform: scale(1.1);
+}
+
+.rating {
+    position: absolute;
+    top: 15px;
+    right: 12px;
+    padding: 6px;
+    background-color: var(--blue2);
+    border-radius: 6px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.movie-card:hover .rating {
+    opacity: 1;
+}
+
+.load-more {
+    background: var(--blue2);
+    display: block;
+    padding: 20px 50px;
+    margin: auto;
+    font-size: 17px;
+    font-weight: 50px;
+    border-radius: 15px;
+    color: white;
+    border: none;
+    transition: 0.5s;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+}
+
+.load-more:hover {
+    background-color: var(--blue);
+}
+
+.section-heading {
+    margin-bottom: 60px;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.category {
+    margin-bottom: 60px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.category-card {
+    position: relative;
+    height: 150px;
+    width: 255px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.category-card img {
+    width: 100%;
+    transition: 0.3s;
+}
+
+.image {
+    height: 150px;
+}
+
+.category-card .name,
+.category-card .total {
+    position: absolute;
+    bottom: 20px;
+    color: var(--white);
+}
+
+.category-card .name {
+    left: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.category-card .total {
+    right: 20px;
+    font-size: 18px;
+    background: var(--blue2);
+    padding: 5px 8px;
+    border-radius: 8px;
+}
+
+.category-card:hover img {
+    filter: blur(5px);
+    transform: scale(1.1);
+}
+
+.category-card:hover .name {
+    color: var(--blue);
+}
+
+.live {
+    margin-bottom: 60px;
+}
+
+.live-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.live-card {
+    position: relative;
+}
+
+.live-card .card-heads {
+    position: relative;
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+.live-card img {
+    width: 100%;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.live-status {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    border-radius: 10px;
+    padding: 2px 8px 2px 8px;
+    letter-spacing: 2px;
+    background-color: #EB5656;
+    font-weight: 160;
+}
+
+.viewers {
+    position: absolute;
+    top: 200px;
+    background-color: var(--blue2);
+    left: 30px;
+    border-radius: 10px;
+    font-weight: 500;
+    padding: 4px 10px 4px 10px;
+}
+
+.live-name {
+    font-size: 22px;
+    margin-top: 10px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.icon {
+    width: 45px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.live-body {
+    display: flex;
+}
+
+.img {
+    height: 100%;
+}
+
+.live-card:hover {
+    cursor: pointer;
+}
+
+.live-card:hover .blur {
+    transform: scale(1.1);
+    filter: blur(5px);
+}
+
+.live-card:hover .live-name {
+    color: var(--blue);
+}

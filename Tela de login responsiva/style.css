@@ -1,13 +1,14 @@
 @charset "UTF-8";
 :root {
     --login-screen-bg: #201B2C;
-    --button-color: #00FF88;
-    --text-color: #77FFC0;
+    --button-color: #5271FF;
+    --text-color: #849bff;
 }
 
 * {
     margin: 0;
     padding: 0;
+    user-select: none;
 }
 
 body {
@@ -39,7 +40,7 @@ body {
 }
 
 .right-login>h1 {
-    color: #00FF88;
+    color: #5271FF;
     font-size: 32px;
     text-transform: uppercase;
     box-shadow: 0px 10px 40px #00000056;
@@ -85,9 +86,14 @@ body {
     font-weight: 800;
     letter-spacing: 2px;
     color: #2B134B;
-    background-color: #00FF88;
+    background-color: var(--button-color);
     cursor: pointer;
-    box-shadow: 0px 10px 40px -12px #00FF8052;
+    box-shadow: 0px 10px 40px -12px #005271FF;
+    transition: 0.3s;
+}
+
+.login:hover {
+    filter: drop-shadow(0px 10px 40px rgb(0, 102, 139));
 }
 
 .left-login>img {
