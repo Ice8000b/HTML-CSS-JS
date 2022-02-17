@@ -23,6 +23,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    overflow-x: hidden;
 }
 
 nav a:hover,
@@ -64,7 +65,7 @@ nav {
 }
 
 .nav-list li {
-    padding: 16px;
+    margin-left: 32px;
     list-style: none;
 }
 
@@ -157,24 +158,30 @@ div>video {
     border-radius: 10px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 999px) {
     .nav-list {
         position: absolute;
         top: 10vh;
         right: 0;
-        width: 0;
+        width: 50vw;
         height: 90vh;
         flex-direction: column;
         background-color: var(--nav-bg);
         justify-content: space-around;
         align-items: center;
         overflow-x: hidden;
+        transform: translateX(100%);
+        transition: ease 0.3s;
     }
     .mobile-menu {
         display: block;
     }
     .nav-list li {
         opacity: 0;
+        margin: 0;
+    }
+    .nav-list.active {
+        transform: translateX(0);
     }
     main h1,
     h2 {
