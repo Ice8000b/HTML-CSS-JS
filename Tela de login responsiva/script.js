@@ -1,7 +1,6 @@
-const button = document.querySelector('.login')
-
-button.addEventListener('click', active)
+const login_button = document.querySelector('.login')
+login_button.addEventListener('click', active)
 
 function active() {
-    button.classList.toggle('active', alert('You are registered!'))
+    login_button.classList.toggle('active', alert('Login sucesfully'))
 }

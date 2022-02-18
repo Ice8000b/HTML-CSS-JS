@@ -1,8 +1,8 @@
 @charset "UTF-8";
 :root {
-    --login-screen-bg: #201B2C;
+    --login-screen-bg: #212536;
     --button-color: #5271FF;
-    --text-color: #849bff;
+    --text-color: #849BFF;
 }
 
 * {
@@ -24,7 +24,6 @@ body {
 .left-login>h1 {
     color: var(--text-color);
     font-size: 3vw;
-    font-family: url('Midia/Fonts/Roboto/Roboto-Bold.ttf');
     margin-top: 20px;
 }
 
@@ -93,11 +92,20 @@ body {
 }
 
 .login:hover {
-    filter: drop-shadow(0px 10px 40px rgb(0, 102, 139));
+    filter: drop-shadow(0px 10px 40px #00668B);
 }
 
 .left-login>img {
     width: 35vw;
+}
+
+.astronaut {
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.astronaut:hover {
+    filter: drop-shadow(0px 10px 40px #486E7C)
 }
 
 @media(max-width: 999px) {
